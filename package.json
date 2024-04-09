@@ -13,6 +13,8 @@
     "mongodb": "^6.5.0",
     "mongoose": "^8.2.4",
     "nes.css": "^2.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "vite": "^5.2.8",
     "vite-express": "^0.16.0"
   },
