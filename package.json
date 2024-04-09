@@ -1,8 +1,9 @@
 {
   "name": "HighscoreStorageApplication",
   "version": "16.14.2",
-  "description": "Submission for CS 4241 Assignment #3",
+  "description": "Submission for CS 4241 Assignment #4",
   "author": "Bashar Alqassar",
+  "type": "module",
   "scripts": {
     "start": "node server.improved.js"
   },
@@ -11,7 +12,9 @@
     "mime": "^4.0.1",
     "mongodb": "^6.5.0",
     "mongoose": "^8.2.4",
-    "nes.css": "^2.3.0"
+    "nes.css": "^2.3.0",
+    "vite": "^5.2.8",
+    "vite-express": "^0.16.0"
   },
   "engines": {
     "node": "16.14.2"

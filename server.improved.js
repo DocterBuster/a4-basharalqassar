@@ -1,11 +1,13 @@
-const express = require('express'),
-    { MongoClient, ObjectId } = require("mongodb"),
-    app = express()
+import express from "express";
+import ViteExpress from "vite-express";
+import {MongoClient} from "mongodb";
+
+const app = express();
 
 
 const logger = (req, res, next) => {
-    //console.log('url:', req.url)
-    next()
+  //console.log('url:', req.url)
+  next()
 }
 
 app.use(logger)
@@ -111,10 +113,10 @@ app.post("/add_userdata", async (req, res) => {
       //Query userdata for data with this user on a specific date
 
       const query =
-      {
-        username: user,
-        date: req.body.date
-      };
+          {
+            username: user,
+            date: req.body.date
+          };
 
       const userScoreOnDate = await userdata.find(query).toArray()
 
@@ -236,7 +238,7 @@ app.post('/post_account', (req, res) =>
 })
 
 
-app.listen(process.env.PORT || 3000)
+ViteExpress.listen(app, 3000, () => console.log("Server is listening..."));
 
 
 
